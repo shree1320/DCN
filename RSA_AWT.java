@@ -1,7 +1,6 @@
 import java.awt.*;
 import java.awt.event.*;
 import java.math.BigInteger;
-
 public class RSA_AWT extends Frame implements ActionListener {
     TextField input; TextArea output; Button run;
     BigInteger p=new BigInteger("61"), q=new BigInteger("53");
@@ -9,7 +8,6 @@ public class RSA_AWT extends Frame implements ActionListener {
     BigInteger phi=(p.subtract(BigInteger.ONE)).multiply(q.subtract(BigInteger.ONE));
     BigInteger e=new BigInteger("17");
     BigInteger d=e.modInverse(phi);
-
     public RSA_AWT(){
         setLayout(new FlowLayout());
         add(new Label("Enter number message:"));
